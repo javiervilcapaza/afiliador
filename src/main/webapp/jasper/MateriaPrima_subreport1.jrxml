@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MateriaPrima_subreport1" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="OP" class="java.lang.String"/>
+	<parameter name="RealPatch" class="java.lang.String"/>
+	<parameter name="Titulo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select p.nombreproyecto,  a.titulo, b.razonsocial, a.numpedido, a.estado, d.nombres || ' ' || d.appaterno || ' ' || d.apmaterno  as nombrecompleto,
+ a.fechaemision, a.fechaentrega,
+e.nombreempresa as empresa, b.nombres, b.tipopersona
+from documento a
+left join proyecto p on (p.idproyecto=a.idproyecto)
+left join cliente b on(b.idcliente=a.idcliente)
+left join empleado d on (d.idempleado=p.idempleado)
+left join empresa e on (e.idempresa=p.idempresa)
+
+where a.numpedido=$P{OP}]]>
+	</queryString>
+	<field name="nombreproyecto" class="java.lang.String"/>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="razonsocial" class="java.lang.String"/>
+	<field name="numpedido" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="nombrecompleto" class="java.lang.String"/>
+	<field name="fechaemision" class="java.sql.Date"/>
+	<field name="fechaentrega" class="java.sql.Date"/>
+	<field name="empresa" class="java.lang.String"/>
+	<field name="nombres" class="java.lang.String"/>
+	<field name="tipopersona" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement x="118" y="42" width="97" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Cliente :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="72" width="213" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Estado :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="57" width="213" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Orden de Pedido :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="87" width="213" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Vendedor Responsable :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="102" width="213" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Fecha Emision :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="117" width="213" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7"/>
+				</textElement>
+				<text><![CDATA[Fecha Entrega :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="228" y="42" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{tipopersona}.equals( "juridica" )?$F{nombres}:$F{razonsocial}) + " (Proyecto: " + $F{nombreproyecto} +")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="57" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numpedido} + " : " + $F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="72" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="228" y="102" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaemision}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="228" y="117" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaentrega}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="228" y="87" width="574" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombrecompleto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="135" width="802" height="13" forecolor="#FFFFFF"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="118" y="6" width="684" height="31" forecolor="#C00000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{empresa} == null ? " " : ($F{empresa}+" -")) + " " + $P{Titulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

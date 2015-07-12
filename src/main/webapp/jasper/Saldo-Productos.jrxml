@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Saldo-Productos" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#DCDCDC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#A9A9A9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1">
+		<parameter name="cliente" class="java.lang.Integer"/>
+		<parameter name="tipoProducto" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+     cliente."nombres" AS cliente_nombres,
+     producto."numeroproducto" AS producto_numeroproducto,
+     tipoproducto."descripcion" AS tipoproducto_descripcion,
+     producto."nombreproducto" AS producto_nombre,
+     movimientoproducto."talla" AS movimientoproducto_talla,
+     (SELECT SUM(mp.cantidad) FROM movimientoproducto mp WHERE mp.idtipomovimiento=1 and mp.idproducto=producto."idproducto" and mp.talla=movimientoproducto."talla")-
+     coalesce((SELECT SUM(mp.cantidad) FROM movimientoproducto  mp WHERE mp.idtipomovimiento=2 and mp.idproducto=producto."idproducto" and mp.talla=movimientoproducto."talla"),0) as movimientoproducto_saldo
+
+FROM
+     "public"."producto" producto,
+     "public"."tipoproducto" tipoproducto,
+     "public"."movimientoproducto" movimientoproducto,
+     "public"."cliente" cliente
+
+WHERE
+
+	producto.idtipoproducto = tipoproducto.idtipoproducto and
+	producto.idcliente = cliente.idcliente and
+	movimientoproducto.idproducto = producto.idproducto and
+	cliente.idcliente = $P{cliente} and
+	tipoproducto.idtipoproducto = coalesce($P{tipoProducto}, tipoproducto.idtipoproducto)
+
+GROUP BY
+	cliente."nombres",
+	producto."numeroproducto",
+	tipoproducto."descripcion",
+	producto."nombreproducto",
+	movimientoproducto."talla",
+	producto."idproducto"]]>
+		</queryString>
+		<field name="producto_numeroproducto" class="java.lang.String"/>
+		<field name="tipoproducto_descripcion" class="java.lang.String"/>
+		<field name="producto_nombre" class="java.lang.String"/>
+		<field name="movimientoproducto_talla" class="java.lang.String"/>
+		<field name="movimientoproducto_saldo" class="java.lang.Number"/>
+	</subDataset>
+	<parameter name="RealPatch" class="java.lang.String"/>
+	<parameter name="cliente" class="java.lang.Integer"/>
+	<parameter name="tipoProducto" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     cliente."nombres" AS cliente_nombres,
+     tipoproducto."descripcion" AS tipoproducto_descripcion
+FROM
+     "public"."producto" producto,
+     "public"."tipoproducto" tipoproducto,
+     "public"."cliente" cliente
+
+WHERE
+
+producto.idtipoproducto = tipoproducto.idtipoproducto and
+producto.idcliente = cliente.idcliente and
+cliente.idcliente = $P{cliente} and
+tipoproducto.idtipoproducto = coalesce($P{tipoProducto}, tipoproducto.idtipoproducto) limit 1]]>
+	</queryString>
+	<field name="tipoproducto_descripcion" class="java.lang.String"/>
+	<field name="cliente_nombres" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" stretchType="RelativeToTallestObject" x="72" y="0" width="730" height="61" forecolor="#C00000"/>
+				<box leftPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph leftIndent="20" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[CORPORACION MUNDO MODA S.A.C. - Reporte de Saldos de Productos Terminados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="141" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="81" width="141" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Producto:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="141" y="81" width="661" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph lineSpacing="Single" leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{tipoProducto}==null?"TODOS":$F{tipoproducto_descripcion})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="101" width="141" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del Reporte:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement style="Column header" x="141" y="101" width="661" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="72" height="61"/>
+				<imageExpression><![CDATA[$P{RealPatch} + "logo_mm.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="141" y="61" width="661" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_nombres}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="121" width="800" height="17" forecolor="#FFFFFF"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="24">
+			<componentElement>
+				<reportElement key="" style="table_TD" mode="Opaque" x="0" y="0" width="802" height="23" backcolor="#FFFFFF"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="New Dataset 1">
+						<datasetParameter name="cliente">
+							<datasetParameterExpression><![CDATA[$P{cliente}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="tipoProducto">
+							<datasetParameterExpression><![CDATA[$P{tipoProducto}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="102">
+						<jr:columnHeader height="21" rowSpan="1">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="102" height="21" backcolor="#D9D9D9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Codigo de Producto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="18" rowSpan="1">
+							<textField>
+								<reportElement style="table_TD" x="0" y="0" width="102" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{producto_numeroproducto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105">
+						<jr:columnHeader height="21" rowSpan="1">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="105" height="21" backcolor="#D9D9D9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Tipo de Producto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 11_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement style="table_TD" mode="Transparent" x="0" y="0" width="105" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tipoproducto_descripcion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="312">
+						<jr:columnHeader height="21" rowSpan="1">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="312" height="21" backcolor="#D9D9D9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Producto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 11_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement style="table_TD" mode="Transparent" x="0" y="0" width="312" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{producto_nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103">
+						<jr:columnHeader height="21" rowSpan="1">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="103" height="21" backcolor="#D9D9D9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Talla]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 11_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement style="table_TD" mode="Transparent" x="0" y="0" width="103" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{movimientoproducto_talla}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179">
+						<jr:columnHeader height="21" rowSpan="1">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="179" height="21" backcolor="#D9D9D9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Saldo Actual]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 11_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement style="table_TD" x="0" y="0" width="179" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{movimientoproducto_saldo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="612" y="0" width="145" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="757" y="0" width="44" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

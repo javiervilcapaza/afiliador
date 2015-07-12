@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MateriaPrima" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#D9D9D9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1">
+		<parameter name="OP" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select  b.codigo, a.idmatprima, b.descripcion,
+ c.descripcion as tipomateriaprima, b.unimedida as unidadmedida,
+  b.costo as costounitario,a.cantidad,  a.total
+
+  from (
+select a.idmatprima, sum(a.costototal) as total, sum(a.cantidadtotal) as cantidad
+
+	from (
+	select a.idmatprima, a.cantidad, a.cantidadglobal , b.costo,
+	a.cantidad*a.cantidadglobal as cantidadtotal, (a.cantidad*a.cantidadglobal) * b.costo as costototal
+
+	 from
+	(
+	select a.idmatprima, b.cantidad as cantidadglobal, a.cantidad
+	from matprimaproducto a
+	left join detalle_documento b on (a.idproducto=b.idproducto)
+	left join documento d on (b.iddocumento=d.iddocumento)
+	where d.numpedido=$P{OP}
+	) a
+	left join (
+	select a.codigo, a.idmatprima, a.idtipmatprima, a.descripcion, b.descripcion as unimedida, a.costounit as costo
+	from materiaprima a
+	inner join unidadmedida b on (a.idunimedida=b.idunimedida)
+	) b on (a.idmatprima=b.idmatprima)
+
+) a
+group by a.idmatprima
+) a
+left join (
+	select a.codigo, a.idmatprima, a.idtipmatprima, a.nombremateriaprima as descripcion, b.descripcion as unimedida, a.costounit as costo
+	from materiaprima a
+	inner join unidadmedida b on (a.idunimedida=b.idunimedida)
+) b
+on (a.idmatprima=b.idmatprima)
+left join tipomateriaprima c on (c.idtipmatprima=b.idtipmatprima)]]>
+		</queryString>
+		<field name="codigo" class="java.lang.String"/>
+		<field name="idmatprima" class="java.lang.Integer"/>
+		<field name="descripcion" class="java.lang.String"/>
+		<field name="tipomateriaprima" class="java.lang.String"/>
+		<field name="unidadmedida" class="java.lang.String"/>
+		<field name="costounitario" class="java.lang.Float"/>
+		<field name="cantidad" class="java.lang.Double"/>
+		<field name="total" class="java.lang.Double"/>
+		<variable name="variable1" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{total}]]></variableExpression>
+		</variable>
+		<group name="total">
+			<groupExpression><![CDATA[$F{total}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="OP" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\btg\\sysmundomoda\\sismundomoda\\src\\main\\webapp\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RealPatch" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from  materiaprima limit 1]]>
+	</queryString>
+	<field name="idmatprima" class="java.lang.Integer"/>
+	<field name="idtipmatprima" class="java.lang.Integer"/>
+	<field name="idunimedida" class="java.lang.Integer"/>
+	<field name="nummatprima" class="java.lang.Integer"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="costounit" class="java.lang.Float"/>
+	<field name="codigo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="150" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="7" width="802" height="140"/>
+				<subreportParameter name="Titulo">
+					<subreportParameterExpression><![CDATA["Reporte de Requerimiento de Materia Prima segun OP"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OP">
+					<subreportParameterExpression><![CDATA[$P{OP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RealPatch">
+					<subreportParameterExpression><![CDATA[$P{RealPatch}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RealPatch} + "MateriaPrima_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<image scaleImage="FillFrame">
+				<reportElement positionType="Float" x="9" y="1" width="60" height="60"/>
+				<imageExpression><![CDATA[$P{RealPatch}+"logo_mm.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="59">
+			<componentElement>
+				<reportElement key="table 2" mode="Opaque" x="0" y="0" width="802" height="58"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="Table Dataset 1">
+						<datasetParameter name="OP">
+							<datasetParameterExpression><![CDATA[$P{OP}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="68">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="68" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="3" rightIndent="3"/>
+								</textElement>
+								<text><![CDATA[Cod. M. Prima]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="68" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="223">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="1" width="223" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Materia Prima]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="223" height="22"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Tipo de M. Prima]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tipomateriaprima}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="88">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="88" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Total de M. Prima segun OP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField pattern="###0.00">
+								<reportElement x="0" y="0" width="88" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="89">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="89" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Unidad de Medida]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="89" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{unidadmedida}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="106">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="106" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Precio Unitario de M. Prima (sin I.G.V.) S/.]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="106" height="22"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{costounitario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="113">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="3" y="0" width="107" height="26"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Sub Total de M. Prima (sin I.G.V.) S/.]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_TD" height="25" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="113" height="24"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="10" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{variable1}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 2_TD" height="22" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="113" height="22"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

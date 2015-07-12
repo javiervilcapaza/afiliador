@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OP-MateriaPrima_subreport1_subreport2" pageWidth="802" pageHeight="555" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="60"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1">
+		<parameter name="idProducto" class="java.lang.Integer"/>
+		<parameter name="cantidad" class="java.lang.Float"/>
+		<queryString>
+			<![CDATA[select t.descripcion as tipomateriaprima, m.nombremateriaprima as materiaprima,
+ a.cantidad as cantidadproducto,
+ m.costounit,
+ a.cantidad*$P{cantidad} as subtotal,
+ u.descripcion as unidadmedida,
+ (a.cantidad*$P{cantidad})*m.costounit total
+from matprimaproducto a inner
+join materiaprima m on(a.idmatprima=m.idmatprima)
+left join unidadmedida u on (m.idunimedida=u.idunimedida)
+left join tipomateriaprima t on (m.idtipmatprima=t.idtipmatprima)
+WHERE a.idproducto=$P{idProducto}]]>
+		</queryString>
+		<field name="tipomateriaprima" class="java.lang.String"/>
+		<field name="materiaprima" class="java.lang.String"/>
+		<field name="cantidadproducto" class="java.lang.Float"/>
+		<field name="costounit" class="java.lang.Float"/>
+		<field name="subtotal" class="java.lang.Double"/>
+		<field name="unidadmedida" class="java.lang.String"/>
+		<field name="total" class="java.lang.Double"/>
+		<variable name="sumatotal" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{total}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="idProducto" class="java.lang.Integer"/>
+	<parameter name="cantidad" class="java.lang.Float"/>
+	<queryString>
+		<![CDATA[SELECT 1 FROM matprimaproducto LIMIT 1]]>
+	</queryString>
+	<field name="?column?" class="java.lang.Integer"/>
+	<variable name="sum" class="java.lang.Double"/>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" x="0" y="0" width="555" height="16"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="Table Dataset 1">
+						<datasetParameter name="idProducto">
+							<datasetParameterExpression><![CDATA[$P{idProducto}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="cantidad">
+							<datasetParameterExpression><![CDATA[$P{cantidad}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="61">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField>
+								<reportElement style="table 1_TD" x="0" y="0" width="61" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tipomateriaprima}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="227">
+						<jr:detailCell style="table 1_TD" height="17" rowSpan="1">
+							<textField>
+								<reportElement style="table 1_TD" x="0" y="0" width="227" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{materiaprima}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47">
+						<jr:detailCell style="table 1_TD" height="17" rowSpan="1">
+							<textField pattern="###0.00">
+								<reportElement style="table 1_TD" x="0" y="0" width="47" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidadproducto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="61">
+						<jr:detailCell style="table 1_TD" height="17" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement style="table 1_TD" x="0" y="0" width="61" height="17"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{costounit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="64">
+						<jr:detailCell style="table 1_TD" height="17" rowSpan="1">
+							<textField pattern="###0.00">
+								<reportElement style="table 1_TD" x="0" y="0" width="64" height="17"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="51">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField pattern="###0.00">
+								<reportElement style="table 1_TD" x="0" y="0" width="51" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{unidadmedida}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="64">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement style="table 1_TD" x="0" y="0" width="64" height="17"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

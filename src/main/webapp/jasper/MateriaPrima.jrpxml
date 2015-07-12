@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="MateriaPrima" pageWidth="842" pageHeight="595" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" orientation="Landscape" locale="es_PE" timezone="America/Bogota">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin group="total" band="groupHeader"/>
+	<origin group="total" band="groupFooter"/>
+	<origin band="background"/>
+	<origin band="detail"/>
+	<origin report="MateriaPrima_Table32Dataset321_1369930111200_302036" group="total" band="groupHeader"/>
+	<origin report="MateriaPrima_Table32Dataset321_1369930111200_302036" group="total" band="groupFooter"/>
+	<origin report="MateriaPrima_Table32Dataset321_1369930111200_302036" band="columnHeader"/>
+	<origin report="MateriaPrima_Table32Dataset321_1369930111200_302036" band="detail"/>
+	<origin report="MateriaPrima_Table32Dataset321_1369930111200_302036" band="pageFooter"/>
+	<origin report="MateriaPrima_subreport1" band="background"/>
+	<origin report="MateriaPrima_subreport1" band="detail"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#D9D9D9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<page>
+		<frame>
+			<reportElement key="table 2" x="20" y="188" width="797" height="143" origin="3" srcId="1"/>
+			<frame>
+				<reportElement style="table 2_CH" x="0" y="0" width="68" height="30" origin="6" srcId="6"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="25.15625">
+					<reportElement x="0" y="0" width="68" height="30" origin="6" srcId="7"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+					<textContent><![CDATA[Cod. M. Prima]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="68" height="30" origin="6" srcId="8">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Text"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Cod. M. Prima]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[codigo]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="68" y="0" width="223" height="30" origin="6" srcId="9"/>
+				<text verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="1" width="223" height="29" origin="6" srcId="10"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Materia Prima]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="223" height="30" origin="6" srcId="11">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Text"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Materia Prima]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[descripcion]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="291" y="0" width="110" height="30" origin="6" srcId="12"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="110" height="28" origin="6" srcId="13"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Tipo de M. Prima]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="110" height="30" origin="6" srcId="14">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Text"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Tipo de M. Prima]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[tipomateriaprima]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="401" y="0" width="88" height="30" origin="6" srcId="15"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="25.15625">
+					<reportElement x="0" y="0" width="88" height="28" origin="6" srcId="16"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Total de M. Prima segun OP]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="88" height="30" origin="6" srcId="17">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Numeric"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn" value="###0.00"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Total de M. Prima segun OP]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[cantidad]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="489" y="0" width="89" height="30" origin="6" srcId="18"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="25.15625">
+					<reportElement x="0" y="0" width="89" height="28" origin="6" srcId="19"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Unidad de Medida]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="89" height="30" origin="6" srcId="20">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Text"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Unidad de Medida]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[unidadmedida]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="578" y="0" width="106" height="30" origin="6" srcId="21"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="25.15625">
+					<reportElement x="0" y="0" width="106" height="28" origin="6" srcId="22"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Precio Unitario de M. Prima (sin I.G.V.)]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="106" height="30" origin="6" srcId="23">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Numeric"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn" value="¤ #,##0.00"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Precio Unitario de M. Prima (sin I.G.V.)]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[costounitario]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_CH" x="684" y="0" width="113" height="30" origin="6" srcId="24"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="25.15625">
+					<reportElement x="3" y="0" width="107" height="26" origin="6" srcId="25"/>
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+					<textContent><![CDATA[Sub Total de M. Prima (sin I.G.V.)]]></textContent>
+				</text>
+				<genericElement>
+					<reportElement mode="Transparent" x="0" y="0" width="113" height="30" origin="6" srcId="26">
+						<property name="net.sf.jasperreports.export.jr.dsr" value="MateriaPrima_Table32Dataset321_1369930111200_302036"/>
+						<property name="net.sf.jasperreports.export.jr.fltrTp" value="Numeric"/>
+						<property name="net.sf.jasperreports.export.jr.fltrPtrn" value="¤ #,##0.00"/>
+					</reportElement>
+					<genericElementType namespace="http://jasperreports.sourceforge.net/jasperreports" name="sort"/>
+					<genericElementParameter name="sortColumnLabel">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Sub Total de M. Prima (sin I.G.V.)]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnName">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[total]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerVerticalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Middle]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortHandlerHorizontalAlign">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Right]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+					<genericElementParameter name="sortColumnType">
+						<genericElementParameterValue class="java.lang.String">
+							<![CDATA[Field]]>
+						</genericElementParameterValue>
+					</genericElementParameter>
+				</genericElement>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="0" y="30" width="68" height="22" origin="7" srcId="27"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="68" height="22" origin="7" srcId="28"/>
+					<textContent><![CDATA[MP-dddd3e]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="68" y="30" width="223" height="22" origin="7" srcId="29"/>
+				<text verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="223" height="22" origin="7" srcId="30"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+					<textContent><![CDATA[Oxford Delgada Cod: OX-2343 Negro]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="291" y="30" width="110" height="22" origin="7" srcId="31"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="110" height="22" origin="7" srcId="32"/>
+					<textContent><![CDATA[Tela]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="401" y="30" width="88" height="22" origin="7" srcId="33"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="#0.00">
+					<reportElement x="0" y="0" width="88" height="22" origin="7" srcId="34"/>
+					<textContent><![CDATA[5,00]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="489" y="30" width="89" height="22" origin="7" srcId="35"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="89" height="22" origin="7" srcId="36"/>
+					<textContent><![CDATA[Metros]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="578" y="30" width="106" height="22" origin="7" srcId="37"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="5" y="0" width="96" height="22" origin="7" srcId="38"/>
+					<textContent><![CDATA[S/ 1,20]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="684" y="30" width="113" height="22" origin="7" srcId="39"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="8" y="0" width="100" height="22" origin="7" srcId="40"/>
+					<textContent><![CDATA[S/ 6,00]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="0" y="52" width="68" height="22" origin="7" srcId="27"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="0.0">
+					<reportElement x="0" y="0" width="68" height="22" origin="7" srcId="28"/>
+					<textContent><![CDATA[]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="68" y="52" width="223" height="22" origin="7" srcId="29"/>
+				<text verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="223" height="22" origin="7" srcId="30"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+					<textContent><![CDATA[Cierre REY Negro]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="291" y="52" width="110" height="22" origin="7" srcId="31"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="110" height="22" origin="7" srcId="32"/>
+					<textContent><![CDATA[Cierre]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="401" y="52" width="88" height="22" origin="7" srcId="33"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="#0.00">
+					<reportElement x="0" y="0" width="88" height="22" origin="7" srcId="34"/>
+					<textContent><![CDATA[8,00]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="489" y="52" width="89" height="22" origin="7" srcId="35"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="89" height="22" origin="7" srcId="36"/>
+					<textContent><![CDATA[Metros]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="578" y="52" width="106" height="22" origin="7" srcId="37"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="5" y="0" width="96" height="22" origin="7" srcId="38"/>
+					<textContent><![CDATA[S/ 0,90]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="684" y="52" width="113" height="22" origin="7" srcId="39"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="8" y="0" width="100" height="22" origin="7" srcId="40"/>
+					<textContent><![CDATA[S/ 7,20]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="0" y="74" width="68" height="22" origin="7" srcId="27"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="68" height="22" origin="7" srcId="28"/>
+					<textContent><![CDATA[008]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="68" y="74" width="223" height="22" origin="7" srcId="29"/>
+				<text verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="223" height="22" origin="7" srcId="30"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+					<textContent><![CDATA[Botones 4 Huecos]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="291" y="74" width="110" height="22" origin="7" srcId="31"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="110" height="22" origin="7" srcId="32"/>
+					<textContent><![CDATA[Botón]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="401" y="74" width="88" height="22" origin="7" srcId="33"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="#0.00">
+					<reportElement x="0" y="0" width="88" height="22" origin="7" srcId="34"/>
+					<textContent><![CDATA[1,00]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="489" y="74" width="89" height="22" origin="7" srcId="35"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="89" height="22" origin="7" srcId="36"/>
+					<textContent><![CDATA[Unidad]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="578" y="74" width="106" height="22" origin="7" srcId="37"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="5" y="0" width="96" height="22" origin="7" srcId="38"/>
+					<textContent><![CDATA[S/ 1,30]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="684" y="74" width="113" height="22" origin="7" srcId="39"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="8" y="0" width="100" height="22" origin="7" srcId="40"/>
+					<textContent><![CDATA[S/ 1,30]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="0" y="96" width="68" height="22" origin="7" srcId="27"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="68" height="22" origin="7" srcId="28"/>
+					<textContent><![CDATA[B990]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="68" y="96" width="223" height="22" origin="7" srcId="29"/>
+				<text verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="223" height="22" origin="7" srcId="30"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+					<textContent><![CDATA[Botones 3 huecos]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="291" y="96" width="110" height="22" origin="7" srcId="31"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="110" height="22" origin="7" srcId="32"/>
+					<textContent><![CDATA[Botón]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="401" y="96" width="88" height="22" origin="7" srcId="33"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="#0.00">
+					<reportElement x="0" y="0" width="88" height="22" origin="7" srcId="34"/>
+					<textContent><![CDATA[67,00]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="489" y="96" width="89" height="22" origin="7" srcId="35"/>
+				<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+					<reportElement x="0" y="0" width="89" height="22" origin="7" srcId="36"/>
+					<textContent><![CDATA[Unidad]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="578" y="96" width="106" height="22" origin="7" srcId="37"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="5" y="0" width="96" height="22" origin="7" srcId="38"/>
+					<textContent><![CDATA[S/ 1,02]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="684" y="96" width="113" height="22" origin="7" srcId="39"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Float" pattern="¤ #,##0.00">
+					<reportElement x="8" y="0" width="100" height="22" origin="7" srcId="40"/>
+					<textContent><![CDATA[S/ 68,34]]></textContent>
+				</text>
+			</frame>
+			<frame>
+				<reportElement style="table 2_TD" x="684" y="118" width="113" height="25" origin="8" srcId="41"/>
+				<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Double" pattern="¤ #,##0.00">
+					<reportElement x="0" y="0" width="108" height="24" origin="8" srcId="42"/>
+					<font isBold="true"/>
+					<textContent><![CDATA[S/ 82,84]]></textContent>
+				</text>
+			</frame>
+		</frame>
+		<rectangle>
+			<reportElement mode="Transparent" x="20" y="20" width="802" height="163" origin="3" srcId="2"/>
+			<graphicElement fill="Solid">
+				<pen lineWidth="0.0"/>
+			</graphicElement>
+		</rectangle>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="76" width="213" height="14" origin="10" srcId="43"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Cliente :]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="106" width="213" height="14" origin="10" srcId="44"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Estado :]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="91" width="213" height="14" origin="10" srcId="45"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Orden de Pedido :]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="121" width="213" height="14" origin="10" srcId="46"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Vendedor Responsable :]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="136" width="213" height="14" origin="10" srcId="47"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Fecha Emision :]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="22" y="151" width="213" height="14" origin="10" srcId="48"/>
+			<font isBold="true"/>
+			<paragraph leftIndent="7"/>
+			<textContent><![CDATA[Fecha Entrega :]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="248" y="76" width="518" height="14" origin="10" srcId="49"/>
+			<textContent><![CDATA[BTG (Proyecto: Proyecto 1)]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="248" y="91" width="284" height="14" origin="10" srcId="50"/>
+			<textContent><![CDATA[OP-2013-000090 : Pedido 54488]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="248" y="106" width="139" height="14" origin="10" srcId="51"/>
+			<textContent><![CDATA[Emitido]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125" valueClass="java.sql.Date" pattern="MM/dd/yyyy">
+			<reportElement x="248" y="136" width="100" height="14" origin="10" srcId="52"/>
+			<textContent><![CDATA[05/03/2013]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125" valueClass="java.sql.Date" pattern="MM/dd/yyyy">
+			<reportElement x="248" y="151" width="100" height="14" origin="10" srcId="53"/>
+			<textContent><![CDATA[05/25/2013]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="248" y="121" width="284" height="14" origin="10" srcId="54"/>
+			<textContent><![CDATA[Victoria Moreno Huerta]]></textContent>
+		</text>
+		<image scaleImage="FillFrame" hAlign="Left" vAlign="Top">
+			<reportElement x="34" y="23" width="61" height="60" origin="10" srcId="55"/>
+			<imageSource isEmbedded="true">
+				<![CDATA[/9j/4QvcRXhpZgAATU0AKgAAAAgADAEAAAMAAAABBKAAAAEBAAMAAAABBHgAAAECAAMAAAADAAAA
+ngEGAAMAAAABAAIAAAESAAMAAAABAAEAAAEVAAMAAAABAAMAAAEaAAUAAAABAAAApAEbAAUAAAAB
+AAAArAEoAAMAAAABAAMAAAExAAIAAAAeAAAAtAEyAAIAAAAUAAAA0odpAAQAAAABAAAA6AAAASAA
+CAAIAAgAEgWuAAAnEAASBa4AACcQQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykAMjAxMzow
+NToyOCAxMDo1OTowMAAAAAAEkAAABwAAAAQwMjIxoAEAAwAAAAH//wAAoAIABAAAAAEAAABsoAMA
+BAAAAAEAAABqAAAAAAAAAAYBAwADAAAAAQAGAAABGgAFAAAAAQAAAW4BGwAFAAAAAQAAAXYBKAAD
+AAAAAQACAAACAQAEAAAAAQAAAX4CAgAEAAAAAQAAClYAAAAAAAAASAAAAAEAAABIAAAAAf/Y/+IC
+QElDQ19QUk9GSUxFAAEBAAACMEFEQkUCEAAAbW50clJHQiBYWVogB88ABgADAAAAAAAAYWNzcEFQ
+UEwAAAAAbm9uZQAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1BREJFAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKY3BydAAAAPwAAAAyZGVzYwAAATAAAABr
+d3RwdAAAAZwAAAAUYmtwdAAAAbAAAAAUclRSQwAAAcQAAAAOZ1RSQwAAAdQAAAAOYlRSQwAAAeQA
+AAAOclhZWgAAAfQAAAAUZ1hZWgAAAggAAAAUYlhZWgAAAhwAAAAUdGV4dAAAAABDb3B5cmlnaHQg
+MTk5OSBBZG9iZSBTeXN0ZW1zIEluY29ycG9yYXRlZAAAAGRlc2MAAAAAAAAAEUFkb2JlIFJHQiAo
+MTk5OCkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAADzUQABAAAAARbMWFlaIAAAAAAA
+AAAAAAAAAAAAAABjdXJ2AAAAAAAAAAECMwAAY3VydgAAAAAAAAABAjMAAGN1cnYAAAAAAAAAAQIz
+AABYWVogAAAAAAAAnBgAAE+lAAAE/FhZWiAAAAAAAAA0jQAAoCwAAA+VWFlaIAAAAAAAACYxAAAQ
+LwAAvpz/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUP
+DAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4O
+EBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/A
+ABEIAGoAbAMBIgACEQEDEQH/3QAEAAf/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsB
+AAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFR
+YRMicYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD
+03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUG
+BwcGBTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC
+0kSTVKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5en
+t8f/2gAMAwEAAhEDEQA/APVUkkkFKSTEgCToFSyeo7ZbSJP7x4+SSm65zWiXEAeJ0VS3quDVzZuP
+g0E/kWPkW2WmbHF3x4VSxFTtP+sWC382w/If3ph9Zum/neoz4t/8iVz1iq2JKe1x+rdNyTtqyGFx
+/NJ2n/NftVxea2I+H13qXTyPRtL6xzVZ7m/L85n9lJT6Gksfo/1lwepkUn9Blf6Fx+l/xT/z1sJK
+Ukkkkp//0PVUxIAkp0G92m0fNBTXyri+WjRg7eKoWK1Z3VWxFTWsVaxWbFWsSU17FVsVqxVbElNd
+6q2K09VbEkNZ5LSHNJDgZBGhBHcLsvqr9a/tjm9O6g79a4puOnqAfmO/4b/z4uNtVO1zmOD2Ete0
+hzXDQgjUOCSX2hJYn1T68OtdMD7CPtdBFeS0dzHtt/q2tW2kp//R9VVe1HPCBagpqWd1VsVqzuqt
+iKmrc5rWlzyGtaCXOPAA1JVDDzK8/Dry6gRXcCWTzAJb/wB9Wd9Ycm/qmWPq7090FwDuo3jiqr/R
+f8ZZ+6ql+RlWuPQOgNNNeJ+iycx3FQH+Dr/etcjSm/d1PH+024tX6a7HrNtzWR7QOGE/6V/7ihRl
+4+ZQ3Ixniyp/BHIP7rh+a5VenYGF0zLyMKmXPbjtsuufq55c58l38n2rMpwMijHp6r0bQ3MD78I/
+Qf8Aven/ACklOocqt2VbicWVNa+PFru/9lDsWZkPdmNZ1rp7XDJxzsupdyWgfpKv7CvU5NWXjtvp
+MseOO4Pdrv6qCkdqpX91dtVK/ukp0fqX1U9O+sNLHOijN/QWjtJ/mXf2bP8Aq16wvBrbHVOFrDD6
+yHtPm07mr237e39kftH837P9o+Wz1UlP/9L1Q8IFqOeFXu+iT4An8EFNWzuqlwLmkBxaSIDhyPMS
+qVeZ1azH6bc+ysO6hAuZ6RArmt129nu3fmbP0qDZ1DKpcW3lpZVmDHtv27R6Tq/VbY781n6R7KvU
+/m0UrYHSsTplT68YOJtebLbXnc97j+dZZ+ckKaqg8VtDN7i98d3O+k9yBf1LIe+8Yxa5jL8emt5a
+SC20fpndt+z95AyszMx3ZFZIs9MUubcWRtba51drnsZ9P0Nnqe1JDHK6ZRdkvyi57LLKvs7ywxLD
+Jj+tr9JQpx68XHrx6tK6mhrZ5gIF2VezKvspsGUK8aW7RDd3qaz6fsftb7vZ71C7MtaXCqxuSBVZ
+YXNbG1zRNc7f9J+59NJSQ1sYXljQ0vdufHd3G5UGYVOPbbbTLfWO59YPsn95rfzUZ1mX6lLC9sXM
+LnHZ9EgNdDdfzt/56quybva15DBusY62NPYdrND7W+okplaqV/dTfkWGASAwvLfWjQgDcDH8p3sV
+Sy1wNp3bpe0NdGkbR/ZSU1sjuvU/Uf8A+N1v/O/Zsf8AgW1eU2vc4PHJHHnK9n/Z5/5q/s6Pd9h9
+GP5XpbP+qSU//9P1RAtVhAvEfAoKadndVbCrVndVbEVNK/IaxxYQZG2B47jt9v8AVWf+0WvkGqxj
+wNxY4Rofoua76L2uWpYq1iSmhZkkDVkaboJj/N09zlVuzA0FxY6AdY5iXAvj+ytCxV7ElOeMoWcN
+LQZjdppOh/tIXqbwdIjsrliq2JKa1qpX91dtVK/ukpn0DpruqddxMSJZ6gst8q6/0j/+p2L2Zch/
+i/6EcTEf1XIbF+YAKQeW0jUH/rzveuvSU//U9VUXtDmwVJJBTnXscwkFU7FtW1MtbtcPge4WZlYl
+tUmNzP3h/FFTn2KtYrNirWJKa9iq2K1YqtiSmu9VbFaeq5Y+xwYxpe92jWtEk/ABJDUtWt9Wfqw/
+quQ3LymkYFRmD/hXD8xv/B/6RanR/qbZa5uR1UbKxqMYH3O/41w+i3+QuwrrZWxtdbQxjBDWtEAA
+dgEkrgBoAAgDQAJ0kklP/9X1VJJJBSkkkklNW/p2LfqW7HH85uioXdAef5q0HycI/wCpWykip5qz
+6v8AUDwaz/aP/kUP/mx1B59z62D4k/wXUpJKedo+qFMg5N7n+LWDaP8AOO5y2MLpmDgiMalrCeX8
+uPxefcrSSSlJJJJKUkkkkp//2f/tE8RQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAADxwBWgADGyVH
+HAIAAAIITAA4QklNBCUAAAAAABAv7wpmd1zvu/xROiVcccpZOEJJTQQ6AAAAAADzAAAAEAAAAAEA
+AAAAAAtwcmludE91dHB1dAAAAAUAAAAAUHN0U2Jvb2wBAAAAAEludGVlbnVtAAAAAEludGUAAAAA
+SW1nIAAAAA9wcmludFNpeHRlZW5CaXRib29sAAAAAAtwcmludGVyTmFtZVRFWFQAAAABAAAAAAAP
+cHJpbnRQcm9vZlNldHVwT2JqYwAAABMASwBvAHIAcgBlAGsAdAB1AHIAbwBwAHMA5gB0AG4AaQBu
+AGcAAAAAAApwcm9vZlNldHVwAAAAAQAAAABCbHRuZW51bQAAAAxidWlsdGluUHJvb2YAAAAJcHJv
+b2ZDTVlLADhCSU0EOwAAAAACLQAAABAAAAABAAAAAAAScHJpbnRPdXRwdXRPcHRpb25zAAAAFwAA
+AABDcHRuYm9vbAAAAAAAQ2xicmJvb2wAAAAAAFJnc01ib29sAAAAAABDcm5DYm9vbAAAAAAAQ250
+Q2Jvb2wAAAAAAExibHNib29sAAAAAABOZ3R2Ym9vbAAAAAAARW1sRGJvb2wAAAAAAEludHJib29s
+AAAAAABCY2tnT2JqYwAAAAEAAAAAAABSR0JDAAAAAwAAAABSZCAgZG91YkBv4AAAAAAAAAAAAEdy
+biBkb3ViQG/gAAAAAAAAAAAAQmwgIGRvdWJAb+AAAAAAAAAAAABCcmRUVW50RiNSbHQAAAAAAAAA
+AAAAAABCbGQgVW50RiNSbHQAAAAAAAAAAAAAAABSc2x0VW50RiNSbHRA1RgAAAAAAAAAAAp2ZWN0
+b3JEYXRhYm9vbAEAAAAAUGdQc2VudW0AAAAAUGdQcwAAAABQZ1BDAAAAAExlZnRVbnRGI1JsdAAA
+AAAAAAAAAAAAAFRvcCBVbnRGI1JsdAAAAAAAAAAAAAAAAFNjbCBVbnRGI1ByY0BZAAAAAAAAAAAA
+EGNyb3BXaGVuUHJpbnRpbmdib29sAAAAAA5jcm9wUmVjdEJvdHRvbWxvbmcAAAAAAAAADGNyb3BS
+ZWN0TGVmdGxvbmcAAAAAAAAADWNyb3BSZWN0UmlnaHRsb25nAAAAAAAAAAtjcm9wUmVjdFRvcGxv
+bmcAAAAAADhCSU0D7QAAAAAAEAEsAAAAAgACASwAAAACAAI4QklNBCYAAAAAAA4AAAAAAAAAAAAA
+P4AAADhCSU0EDQAAAAAABAAAAHg4QklNBBkAAAAAAAQAAAAeOEJJTQPzAAAAAAAJAAAAAAAAAAAB
+ADhCSU0ECgAAAAAAAQAAOEJJTScQAAAAAAAKAAEAAAAAAAAAAjhCSU0D9QAAAAAASAAvZmYAAQBs
+ZmYABgAAAAAAAQAvZmYAAQChmZoABgAAAAAAAQAyAAAAAQBaAAAABgAAAAAAAQA1AAAAAQAtAAAA
+BgAAAAAAAThCSU0D+AAAAAAAcAAA/////////////////////////////wPoAAAAAP//////////
+//////////////////8D6AAAAAD/////////////////////////////A+gAAAAA////////////
+/////////////////wPoAAA4QklNBAAAAAAAAAIAAThCSU0EAgAAAAAABAAAAAA4QklNBDAAAAAA
+AAIBAThCSU0ELQAAAAAAAgAAOEJJTQQIAAAAAAAQAAAAAQAAAkAAAAJAAAAAADhCSU0EHgAAAAAA
+BAAAAAA4QklNBBoAAAAAA0UAAAAGAAAAAAAAAAAAAABqAAAAbAAAAAgAbABvAGcAbwBfAGMAbQBt
+AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABsAAAAagAAAAAAAAAAAAAAAAAAAAAB
+AAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAbnVsbAAAAAIAAAAGYm91bmRzT2JqYwAAAAEA
+AAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25n
+AAAAagAAAABSZ2h0bG9uZwAAAGwAAAAGc2xpY2VzVmxMcwAAAAFPYmpjAAAAAQAAAAAABXNsaWNl
+AAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAHZ3JvdXBJRGxvbmcAAAAAAAAABm9yaWdpbmVudW0A
+AAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5lcmF0ZWQAAAAAVHlwZWVudW0AAAAKRVNsaWNlVHlw
+ZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAA
+AAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAAGoAAAAAUmdodGxvbmcAAABsAAAAA3VybFRF
+WFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAAAAAATXNnZVRFWFQAAAABAAAAAAAGYWx0VGFnVEVY
+VAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJvb2wBAAAACGNlbGxUZXh0VEVYVAAAAAEAAAAAAAlo
+b3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpBbGlnbgAAAAdkZWZhdWx0AAAACXZlcnRBbGlnbmVu
+dW0AAAAPRVNsaWNlVmVydEFsaWduAAAAB2RlZmF1bHQAAAALYmdDb2xvclR5cGVlbnVtAAAAEUVT
+bGljZUJHQ29sb3JUeXBlAAAAAE5vbmUAAAAJdG9wT3V0c2V0bG9uZwAAAAAAAAAKbGVmdE91dHNl
+dGxvbmcAAAAAAAAADGJvdHRvbU91dHNldGxvbmcAAAAAAAAAC3JpZ2h0T3V0c2V0bG9uZwAAAAAA
+OEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQQRAAAAAAABAQA4QklNBBQAAAAAAAQAAAATOEJJ
+TQQMAAAAAApyAAAAAQAAAGwAAABqAAABRAAAhigAAApWABgAAf/Y/+ICQElDQ19QUk9GSUxFAAEB
+AAACMEFEQkUCEAAAbW50clJHQiBYWVogB88ABgADAAAAAAAAYWNzcEFQUEwAAAAAbm9uZQAAAAAA
+AAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1BREJFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAKY3BydAAAAPwAAAAyZGVzYwAAATAAAABrd3RwdAAAAZwAAAAUYmtw
+dAAAAbAAAAAUclRSQwAAAcQAAAAOZ1RSQwAAAdQAAAAOYlRSQwAAAeQAAAAOclhZWgAAAfQAAAAU
+Z1hZWgAAAggAAAAUYlhZWgAAAhwAAAAUdGV4dAAAAABDb3B5cmlnaHQgMTk5OSBBZG9iZSBTeXN0
+ZW1zIEluY29ycG9yYXRlZAAAAGRlc2MAAAAAAAAAEUFkb2JlIFJHQiAoMTk5OCkAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAFhZWiAAAAAAAADzUQABAAAAARbMWFlaIAAAAAAAAAAAAAAAAAAAAABjdXJ2
+AAAAAAAAAAECMwAAY3VydgAAAAAAAAABAjMAAGN1cnYAAAAAAAAAAQIzAABYWVogAAAAAAAAnBgA
+AE+lAAAE/FhZWiAAAAAAAAA0jQAAoCwAAA+VWFlaIAAAAAAAACYxAAAQLwAAvpz/7QAMQWRvYmVf
+Q00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwM
+DAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwM
+DAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAGoAbAMBIgACEQED
+EQH/3QAEAAf/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAA
+AAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMicYEyBhSRobFCIyQV
+UsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj80YnlKSFtJXE1OT0
+pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRB
+UWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKz
+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
+ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2
+NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0
+cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRp
+b24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+bW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291
+cmNlRXZlbnQjIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9w
+LzEuMC8iIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9
+Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6
+Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpk
+b2NpZDpwaG90b3Nob3A6ZjRmNzE2ODktZTJlZi0xMWUwLWEyMGItOTI4ZDQyZDY3NmE0IiB4bXBN
+TTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCNzVBRkY3QUVDN0UyMTE5QkUxRDlDMzVFMzM3MjZEIiB4
+bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpmNGY3MTY4OS1l
+MmVmLTExZTAtYTIwYi05MjhkNDJkNjc2YTQiIHBob3Rvc2hvcDpMZWdhY3lJUFRDRGlnZXN0PSIw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIg
+eG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgNy4wIiB4bXA6TW9kaWZ5RGF0ZT0iMjAx
+My0wNS0yOFQxMDo1OS0wNTowMCIgeG1wOkNyZWF0ZURhdGU9IjIwMTMtMDUtMjhUMTA6NDc6MTAt
+MDU6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTMtMDUtMjhUMTA6NTktMDU6MDAiIGRjOmZvcm1h
+dD0iaW1hZ2UvanBlZyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiPiA8eG1wTU06SGlzdG9yeT4g
+PHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0i
+eG1wLmlpZDpFQTc1QUZGN0FFQzdFMjExOUJFMUQ5QzM1RTMzNzI2RCIgc3RFdnQ6d2hlbj0iMjAx
+My0wNS0yOFQxMDo1OS0wNTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9w
+IENTNiAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249
+InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOkVCNzVBRkY3QUVDN0UyMTE5QkUxRDlD
+MzVFMzM3MjZEIiBzdEV2dDp3aGVuPSIyMDEzLTA1LTI4VDEwOjU5LTA1OjAwIiBzdEV2dDpzb2Z0
+d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0i
+LyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2Vz
+dG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmY0ZjcxNjg5LWUy
+ZWYtMTFlMC1hMjBiLTkyOGQ0MmQ2NzZhNDwvcmRmOmxpPiA8L3JkZjpCYWc+IDwvcGhvdG9zaG9w
+OkRvY3VtZW50QW5jZXN0b3JzPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICA8P3hwYWNrZXQgZW5kPSJ3Ij8+/+4ADkFkb2JlAGRAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEB
+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQEB
+AQEBAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD
+/8AAEQgAagBsAwERAAIRAQMRAf/dAAQADv/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEA
+CwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEH
+EyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZX
+GrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaan
+qKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQEC
+AxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVk
+Jwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eH
+l6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMR
+AD8A39/bDfEet9de9de697917r3v3XuoldX0OMppKzJVtJj6SIFpaqtqIaWnjUC5LzTukagAfk+9
+gE+XXugD3T8qejNpmSOr3rBlaiJir0+3aKuzbXBsQKiip2oTz/zd920fPrRIHQJ5b+Yh0fjJGWPD
+9hVyr9ZIcBQRKf8Agq1GYjcj/XA92CgH59aLdNtJ/Mu+N7useUXf+DuQGmrdpmqp0Bt6mbF19dLb
+n8Ife6nyPWta1p0Puwflp8cezaiKh2h2/s2rykwTx4bJ5H+7uZd3+kcWL3DHjK2okB4tGj8+9d3k
+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
+OpJWrJlusssAuja4Zp1cCvHrZCwOBwm18Li9ubbxGOwOAwdDTYvDYXEUVPjsXi8dRxLBSUNBQ0sc
+VNS0tPCgVERQqgce9LUju6v07+7de697917r/9Pf39sN8R63117117r3v3XuvEAgggEEEEHkEH6g
+j8g+/Vp17oDt8/HfrDfZmnq8M+EyU2pmye3JVxk7uR+uemEcuPqDfkl4SSfz7uH9R17oom8PgVmq
+kyNtPsLHTo2opT7jxFRSyA3uEarxc1TG5t/a8Kf63u4YdVK16Lpnf5fffk0jrRVWwKtCeJP7wZCm
+BAvzolwpYXv79UevWiDnpGx/yxe/czNpyG5etcHC1tUr5LOZR1A+toaXDwhibcese/D7eqlCSTXj
+0Luyv5QuzRNDV9p9r7h3CgbVPhdmYuj2xSSWNxG+YyEmayTxt9CYo6d7fRh73nregevVi/Tfxm6M
+6CpWg6q652/tmsmi8NZnxTtkd0ZBCAHFduTJPVZidJLXaPzCK/8AZ91ox+XVwAOHQ7+79e697917
+r3v3Xuve/de6/9Tf39sN8R63117117r3v3Xuve/de697917r3v3Xuve/de67Hu6cT149d+3etde9
++691737r3Xvfuvde9+691737r3X/2Q==]]>
+			</imageSource>
+		</image>
+		<text textHeight="12.578125">
+			<reportElement x="22" y="169" width="802" height="13" forecolor="#FFFFFF" origin="10" srcId="56"/>
+			<textContent><![CDATA[Static text]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="15.511719">
+			<reportElement x="20" y="36" width="802" height="31" forecolor="#C00000" origin="10" srcId="57"/>
+			<font fontName="Arial Black" size="11"/>
+			<textContent><![CDATA[Mundo Moda  - Reporte de Requerimiento de Materia Prima segun OP]]></textContent>
+		</text>
+	</page>
+</jasperPrint>

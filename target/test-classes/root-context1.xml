@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter" ref="jpaAdapter" />
+		<property name="loadTimeWeaver">
+			<bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
+		</property>
+		<property name="persistenceUnitName" value="std-domain" />
+	</bean>
+	
+	<bean id="usuarioporTrazaDAO" class="com.btg.std.dao.impl.UsuarioporTrazaDAOHibernate">
+	</bean>
+	<bean id="trazaDAO" class="com.btg.std.dao.impl.TrazaDAOHibernate">
+	</bean>
+	<bean id="usuarioDAO" class="com.btg.std.dao.impl.UsuarioDAOHibernate">
+	</bean>
+	<bean id="expedienteDAO" class="com.btg.std.dao.impl.ExpedienteDAOHibernate">
+	</bean>
+	<bean id="perfilDAO" class="com.btg.std.dao.impl.PerfilDAOHibernate">
+	</bean>
+	<bean id="archivoDAO" class="com.btg.std.dao.impl.ArchivoDAOHibernate">
+	</bean>
+	<bean id="documentoDAO" class="com.btg.std.dao.impl.DocumentoDAOHibernate">
+	</bean>
+	<bean id="tipoNotificacionDAO" class="com.btg.std.dao.impl.TipoNotificacionDAOHibernate">
+	</bean>
+	<bean id="enviarNotificacionService" class="com.btg.std.service.impl.EnviarNotificacionServiceImpl">
+	</bean>
+	<bean id="notificacionDAO" class="com.btg.std.dao.impl.NotificacionDAOHibernate">
+	</bean>
+	<bean id="rolDAO" class="com.btg.std.dao.impl.RolDAOHibernate">
+	</bean>
+	<bean id="procesoDAO" class="com.btg.std.dao.impl.ProcesoDAOHibernate">
+	</bean>
+	<bean id="tipoProcesoDAO" class="com.btg.std.dao.impl.TipoProcesoDAOHibernate">
+	</bean>
+	<bean id="gridDAO" class="com.btg.std.dao.impl.GridDAOHibernate">
+	</bean>
+	<bean id="menuDAO" class="com.btg.std.dao.impl.MenuDAOHibernate">
+	</bean>
+	<bean id="columnaDAO" class="com.btg.std.dao.impl.ColumnaDAOHibernate">
+	</bean>
+	<!--Services -->
+	<bean id="loginService" class="com.btg.std.service.impl.LoginServiceImpl">
+	      <property name="usuarioDAO" ref="usuarioDAO" />
+	      <property name="perfilDAO" ref="perfilDAO" />
+	      <property name="rolDAO" ref="rolDAO" />
+	      <property name="menuDAO" ref="menuDAO" />
+	      <property name="gridDAO" ref="gridDAO" />
+	      <property name="columnaDAO" ref="columnaDAO" />
+	      <property name="ldapControllerService" ref="ldapControllerService" />
+	</bean>
+	<bean id="ldapControllerService" class="com.btg.std.ldap.impl.LdapController">
+	</bean>
+
+   
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="username" value="STD" />
+		<property name="password" value="STD" />
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@10.250.93.1:1521:XE" />
+	</bean>
+	
+	<bean id="jpaAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect" />
+		<property name="showSql" value="false" />
+	</bean>
+	
+	
+
+</beans>

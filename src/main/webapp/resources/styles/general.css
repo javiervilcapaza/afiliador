@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "Helvetica", "Verdana", "sans-serif", "Arial";
+	font-size: 11px;
+	height: 100%;
+	margin: 0;
+}

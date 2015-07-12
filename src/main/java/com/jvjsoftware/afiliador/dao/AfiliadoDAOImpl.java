@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-import org.apache.log4j.Logger;
+
+
 import org.springframework.stereotype.Repository;
 
 import com.jvjsoftware.afiliador.domain.Afiliado;
@@ -38,7 +40,7 @@ public class AfiliadoDAOImpl extends DAO<Afiliado> implements AfiliadoDAO {
 			q.setParameter("idAfiliado", idAfiliado);
 			afiliados = q.getResultList();
 		} catch (Exception e) {
-			log.error("Error al listar afiliados: "+e.getMessage());
+			log.info("Error al listar afiliados: "+e.getMessage());
 			return afiliados;
 		}
 		return afiliados;

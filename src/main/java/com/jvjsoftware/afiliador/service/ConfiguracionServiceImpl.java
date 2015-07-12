@@ -1,6 +1,7 @@
 package com.jvjsoftware.afiliador.service;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,7 +31,7 @@ public class ConfiguracionServiceImpl implements ConfiguracionService{
 			configuracionDAO.guardar(configuracion);
 			respuesta = 1;
 		}catch(Exception e){
-			log.error("Error al guardar la configuracion: " + e.getMessage());
+			log.info("Error al guardar la configuracion: " + e.getMessage());
 		}
 		
 		return respuesta;

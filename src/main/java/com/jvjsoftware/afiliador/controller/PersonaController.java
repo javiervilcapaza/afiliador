@@ -3,11 +3,10 @@ package com.jvjsoftware.afiliador.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,8 +23,8 @@ public class PersonaController {
 	@Autowired
 	private PersonaService personaService;
 	
-	private static final Logger log = LoggerFactory
-			.getLogger(RolController.class);
+	private static final Logger log = Logger
+			.getLogger(RolController.class.getName());
 	
 	@RequestMapping(value = "lista")
 	public String lista(Locale locale, Model model, HttpSession session, String info){

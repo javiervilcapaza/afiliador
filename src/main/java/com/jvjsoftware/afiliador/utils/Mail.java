@@ -10,6 +10,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -22,7 +23,6 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import org.apache.log4j.Logger;
 
 /**
  * 
@@ -35,7 +35,7 @@ import org.apache.log4j.Logger;
  */
 public class Mail{
 
-	private static Logger log=Logger.getLogger(Mail.class);
+	private static Logger log=Logger.getLogger(Mail.class.getName());
 
 	private String server;
 
@@ -89,7 +89,7 @@ public class Mail{
 			destinatarios.add(ia);
 		}
 		catch(AddressException e){
-			log.debug("No se pudo agregar el destinatario");
+			log.info("No se pudo agregar el destinatario");
 		}
 	}
 
@@ -113,11 +113,11 @@ public class Mail{
 				procesarContenido();
 			}
 			if(asunto == null){
-				log.warn("Se debe especificar un asunto para el correo");
+				log.info("Se debe especificar un asunto para el correo");
 				return false;
 			}
 			if(contenido == null){
-				log.warn("Se debe especificar un contenido para el correo");
+				log.info("Se debe especificar un contenido para el correo");
 				return false;
 			}
 			Properties p=new Properties();
@@ -146,7 +146,7 @@ public class Mail{
 				t.close();
 			}
 			catch(MessagingException e){
-				log.error("Error enviando correo",e);
+				log.info("Error enviando correo");
 				return false;
 			}
 			return true;
@@ -184,7 +184,7 @@ public class Mail{
 			}
 		}
 		catch(IOException e){
-			log.error("Error procesando archivo [" + ruta + "]",e);
+			log.info("Error procesando archivo [" + ruta + "]");
 		}
 		finally{
 			if(reader != null){

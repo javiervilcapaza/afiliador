@@ -1,12 +1,10 @@
 package com.jvjsoftware.afiliador.controller;
 
 import java.util.ArrayList;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpSession;
 
@@ -39,7 +37,7 @@ public class PerfilController {
 	@Autowired
 	RolService rolService;
 
-	private static final Logger log = LoggerFactory.getLogger(PerfilController.class);
+	private static final Logger log = Logger.getLogger(PerfilController.class.getName());
 
 	@RequestMapping(value = "lista")
 	public String perfilLista(Locale locale, Model model, HttpSession session, String info) {

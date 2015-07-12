@@ -1,8 +1,8 @@
 package com.jvjsoftware.afiliador.utils;
 
 import java.util.List;
+import java.util.logging.Logger;
 
-import org.apache.log4j.Logger;
 
 /**
  * 
@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
  */
 public class EnviarMail implements Runnable {
 
-	private static Logger log=Logger.getLogger(EnviarMail.class);
+	private static Logger log=Logger.getLogger(EnviarMail.class.getName());
 	
 	//private String destinatario;
 	
@@ -50,14 +50,14 @@ public class EnviarMail implements Runnable {
 			mail.agregarDestinatario(destinatario);
 			destinos+=" "+destinatario+",";
 		}
-		log.debug("Enviando notificacion por correo a "+destinos);
+		log.info("Enviando notificacion por correo a "+destinos);
 		mail.setAsunto(titulo);
 		mail.setContenido(contenido);
 		if(mail.enviarCorreo()){
-			log.debug("Notificaciones por correo enviadas a "+destinos);
+			log.info("Notificaciones por correo enviadas a "+destinos);
 		}
 		else{
-			log.debug("No se pudo enviar el correo al destinatario");
+			log.info("No se pudo enviar el correo al destinatario");
 		}
 
 		

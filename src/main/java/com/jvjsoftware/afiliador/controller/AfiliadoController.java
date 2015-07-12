@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ConstantException;
 import org.springframework.security.core.Authentication;
@@ -88,7 +90,7 @@ public class AfiliadoController {
 		try {
 			idLink = Encrypt.encrypt("hola", afiliadoSession.getId().toString());
 		} catch (Exception e) {
-			log.error("Error al obtener el ID encriptado del afiliado: " + e.getMessage());
+			log.info("Error al obtener el ID encriptado del afiliado: " + e.getMessage());
 		}
 
 		model.addAttribute("idLink", Config.getPropiedad("url.afiliarse").concat(idLink));

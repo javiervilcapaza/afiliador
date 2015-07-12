@@ -5,10 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -82,7 +84,7 @@ public class FrontEndController {
 		try {
 			idAfiliadoPadre = Integer.parseInt(Encrypt.decrypt("hola", idLink));
 		} catch (Exception e) {
-			log.error("Error al obtener el ID encriptado del afiliado: " + e.getMessage());
+			log.info("Error al obtener el ID encriptado del afiliado: " + e.getMessage());
 		}
 
 		Afiliado afiliadoPadre = afiliadoService.buscaAfiliadoPorId(idAfiliadoPadre);

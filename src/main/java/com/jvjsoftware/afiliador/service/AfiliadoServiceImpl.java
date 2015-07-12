@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -119,7 +119,7 @@ public class AfiliadoServiceImpl implements AfiliadoService {
 			}
 			respuesta = 1;
 		} catch (Exception e) {
-			log.error("Error al guardar Afiliado: " + e.getMessage());
+			log.info("Error al guardar Afiliado: " + e.getMessage());
 		}
 		return respuesta;
 	}
@@ -340,7 +340,7 @@ public class AfiliadoServiceImpl implements AfiliadoService {
 			}
 
 		} catch (Exception e) {
-			log.error("Error al obtener datos de afiliado: " + e.getMessage());
+			log.info("Error al obtener datos de afiliado: " + e.getMessage());
 		}
 		return afiliadoDTO;
 	}
@@ -375,7 +375,7 @@ public class AfiliadoServiceImpl implements AfiliadoService {
 			EnviarEmail.enviarEmailMember(mail);
 
 		} catch (Exception e) {
-			log.error("Error al asociar usuario : " + e.getMessage());
+			log.info("Error al asociar usuario : " + e.getMessage());
 			afiliadoDTO.setIdUsuario(-1);
 			return afiliadoDTO;
 		}
@@ -481,7 +481,7 @@ public class AfiliadoServiceImpl implements AfiliadoService {
 			
 			respuesta = 1;
 		} catch (Exception e) {
-			log.error("Error al restablecer : " + e.getMessage());
+			log.info("Error al restablecer : " + e.getMessage());
 		}
 		return respuesta;
 	}
@@ -509,7 +509,7 @@ public class AfiliadoServiceImpl implements AfiliadoService {
 			respuesta.put("totalPuntoNivel2", puntosNivel2);
 			
 		} catch (Exception e) {
-			log.error("Error al obtener resumen de ganancias: " + e.getMessage());
+			log.info("Error al obtener resumen de ganancias: " + e.getMessage());
 		}
 		return respuesta;
 	}

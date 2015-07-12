@@ -2,8 +2,8 @@ package com.jvjsoftware.afiliador.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -119,7 +119,7 @@ public class PerfilServiceImpl implements PerfilService {
 
 			respuesta = 1;
 		} catch (Exception e) {
-			log.error("Error al guardar asociacion: " + e.getMessage());
+			log.info("Error al guardar asociacion: " + e.getMessage());
 		}
 		return respuesta;
 	}
